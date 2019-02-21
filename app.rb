@@ -10,12 +10,14 @@ class Birthday < Sinatra::Base
   post '/birthday' do
     session[:your_name] = params[:name]
     session[:your_day] = params[:day]
+    session[:your_month] = params[:month]
     redirect('/birthday')
   end
 
   get '/birthday' do
     @your_name = session[:your_name]
     @your_day = session[:your_day]
+    @your_month = session[:your_month]
     erb(:birthday)
   end
 
