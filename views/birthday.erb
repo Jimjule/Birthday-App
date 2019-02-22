@@ -1,1 +1,16 @@
-Hello <%= @your_name %>, <%= @your_day %> <%= @your_month %>
+Hello <%= @your_name %>, <%= @your_day %>, <%= @your_month %>
+<br/>
+<br/>
+<%= bday = Date.parse "2019-" + @your_month + "-" + @your_day%> PARSING OF INFO TO DATE
+<br/>
+<br/>
+<%= bday = bday.yday %> YEARDAY OF BIRTHDAY
+<br/>
+<br/>
+<%= Date.today %> TODAY
+<br/>
+<br/>
+<%= now = Date.today.yday %> TODAY YEARDAY
+<br/>
+<br/>
+<%= bday - now %> DIFFERENCE
